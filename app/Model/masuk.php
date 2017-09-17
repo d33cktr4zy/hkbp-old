@@ -18,7 +18,16 @@ class masuk extends Model
      *
      * @var array
      */
-    //protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'msk_regno',
+        'msk_idumat',
+        'msk_tgl',
+        'msk_gereja',
+        'msk_createby',
+        'msk_createdt',
+        'msk_modifyby',
+        'msk_modifydt'
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.

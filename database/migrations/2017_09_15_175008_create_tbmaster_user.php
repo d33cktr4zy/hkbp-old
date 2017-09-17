@@ -24,7 +24,7 @@ class CreateTbmasterUser extends Migration
             $table->string('user_modifyby');
             $table->date('user_modifydt');
             $table->rememberToken();
-            $table->timestamps();
+            $table->timestamps('user_lastvisit');
 
         });
     }

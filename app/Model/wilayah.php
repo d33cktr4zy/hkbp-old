@@ -13,12 +13,22 @@ class wilayah extends Model
      */
     protected $table = 'tbadd_wilayah';
 
+    public $primaryKey = 'wil_id';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-//    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'wil_id',
+        'wil_namawilayah',
+        'wil_kodewilayah',
+        'wil_createby',
+        'wil_createdt',
+        'wil_modifyby',
+        'wil_modifydt'
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.

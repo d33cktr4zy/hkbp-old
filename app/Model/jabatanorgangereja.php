@@ -13,12 +13,23 @@ class jabatanorgangereja extends Model
      */
     protected $table = 'tbadd_jabatanorgangereja';
 
+    public $primaryKey = 'jabog_iid';
+
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    //protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'jabog_id',
+        'jabog_namajabatan',
+        'jabog_keterangan',
+        'jabog_createby',
+        'jabog_createdt',
+        'jabog_modifyby',
+        'jabog_modifydt'
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.

@@ -13,12 +13,25 @@ class nikah extends Model
      */
     protected $table = 'tbtr_nikah';
 
+    public $primaryKey = 'nik_regno';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-//    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'nik_regno',
+        'nik_idumat',
+        'nik_idpasangan',
+        'nik_tglnikah',
+        'nik_gereja',
+        'nik_pendeta',
+        'nik_createby',
+        'nik_createdt',
+        'nik_modifyby',
+        'nik_modifydt'
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.

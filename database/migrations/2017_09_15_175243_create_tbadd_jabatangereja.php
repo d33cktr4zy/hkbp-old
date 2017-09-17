@@ -13,12 +13,12 @@ class CreateTbaddJabatangereja extends Migration
     public function up()
     {
         Schema::create('tbadd_jabatangereja', function (Blueprint $table) {
-            $table->smallInteger('jabg_id')->unsigned();
-            $table->varchar('jabg_namajabatan',255);
-            $table->varchar('jabg_keterangan',255);
-            $table->varchar('jabg_createby',20);
+            $table->smallInteger('jabg_id')->unsigned()->primary();
+            $table->string('jabg_namajabatan',255);
+            $table->string('jabg_keterangan',255);
+            $table->string('jabg_createby',20);
             $table->date('jabg_createdt');
-            $table->varchar('jabg_modifyby',20);
+            $table->string('jabg_modifyby',20);
             $table->date('jabg_modifydt');
 
         });

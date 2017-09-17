@@ -13,14 +13,14 @@ class CreateTbtrSidi extends Migration
     public function up()
     {
         Schema::create('tbtr_sidi', function (Blueprint $table) {
-            $table->string('sidi_regno',20);
+            $table->string('sidi_regno',20)->primary();
             $table->string('sidi_idumat',20);
             $table->date('sidi_tglsidi');
             $table->string('sidi_gereja',255);
             $table->string('sidi_pendeta',255);
-            $table->varchar('sidi_createby',20);
+            $table->string('sidi_createby',20);
             $table->date('sidi_createdt');
-            $table->varchar('sidi_modifyby',20);
+            $table->string('sidi_modifyby',20);
             $table->date('sidi_modifydt');
         });
     }

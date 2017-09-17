@@ -13,13 +13,14 @@ class CreateTbmasterDll extends Migration
     public function up()
     {
         Schema::create('tbmaster_dll', function (Blueprint $table) {
-            $table->varchar('dll_regno',20);
-            $table->varchar('dll_idkk',20);
-            $table->varchar('dll_idumat',20);
-            $table->smallInteger('dll_nourut');
-            $table->varchar('dll_createby',20);
+            $table->string('dll_regno',20)->primary();
+            $table->string('dll_idkk',20);
+            $table->string('dll_idumat',20);
+            $table->integer('dll_nourut');
+            $table->string('dll_keterangan',255)->nullable();
+            $table->string('dll_createby',20);
             $table->date('dll_createdt');
-            $table->varchar('dll_modifyby',20);
+            $table->string('dll_modifyby',20);
             $table->date('dll_modifydt');
 
         });

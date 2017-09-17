@@ -13,11 +13,11 @@ class CreateTbaddStatusjemaat extends Migration
     public function up()
     {
         Schema::create('tbadd_statusjemaat', function (Blueprint $table) {
-            $table->smallInteger('status_id');
+            $table->smallInteger('status_id')->primary();
             $table->string('status_nama');
-            $table->varchar('status_createby',20);
+            $table->string('status_createby',20);
             $table->date('status_createdt');
-            $table->varchar('status_modifyby',20);
+            $table->string('status_modifyby',20);
             $table->date('status_modifydt');
         });
     }

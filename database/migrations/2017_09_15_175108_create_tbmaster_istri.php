@@ -13,14 +13,14 @@ class CreateTbmasterIstri extends Migration
     public function up()
     {
         Schema::create('tbmaster_istri', function (Blueprint $table) {
-            $table->varchar('istri_regid',20);
-            $table->varchar('istri_idumat',20);
-            $table->varchar('istri_idkk',20);
+            $table->string('istri_regid',20)->primary();
+            $table->string('istri_idumat',20);
+            $table->string('istri_idkk',20);
             $table->smallInteger('istri_urut')->unsigned();
-            $table->varchar('kk_createby',20);
-            $table->date('kk_createdt');
-            $table->varchar('kk_modifyby',20);
-            $table->date('kk_modifydt');
+            $table->string('istri_createby',20);
+            $table->date('istri_createdt');
+            $table->string('istri_modifyby',20);
+            $table->date('istri_modifydt');
         });
     }
 

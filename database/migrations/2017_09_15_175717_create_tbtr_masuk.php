@@ -13,13 +13,13 @@ class CreateTbtrMasuk extends Migration
     public function up()
     {
         Schema::create('tbtr_masuk', function (Blueprint $table) {
-            $table->string('msk_regno',20);
+            $table->string('msk_regno',20)->primary();
             $table->string('msk_idumat',20);
             $table->date('msk_tgl');
             $table->string('msk_gereja');
-            $table->varchar('msk_createby',20);
+            $table->string('msk_createby',20);
             $table->date('msk_createdt');
-            $table->varchar('msk_modifyby',20);
+            $table->string('msk_modifyby',20);
             $table->date('msk_modifydt');
 
         });

@@ -13,12 +13,12 @@ class CreateTbaddWilayah extends Migration
     public function up()
     {
         Schema::create('tbadd_wilayah', function (Blueprint $table) {
-            $table->smallInteger('wil_id');
+            $table->smallInteger('wil_id')->primary();
             $table->string('wil_namawilayah',250);
             $table->string('wil_kodewilayah',250);
-            $table->varchar('wil_createby',20);
+            $table->string('wil_createby',20);
             $table->date('wil_createdt');
-            $table->varchar('wil_modifyby',20);
+            $table->string('wil_modifyby',20);
             $table->date('wil_modifydt');
 
         });

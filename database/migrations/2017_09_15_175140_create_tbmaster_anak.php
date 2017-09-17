@@ -13,13 +13,13 @@ class CreateTbmasterAnak extends Migration
     public function up()
     {
         Schema::create('tbmaster_anak', function (Blueprint $table) {
-            $table->varchar('anak_regid',20);
-            $table->varchar('anak_idumat',20);
-            $table->varchar('anak_idkk',20);
+            $table->string('anak_regid',20)->primary();
+            $table->string('anak_idumat',20);
+            $table->string('anak_idkk',20);
             $table->smallInteger('anak_anakke')->unsigned();
-            $table->varchar('anak_createby',20);
+            $table->string('anak_createby',20);
             $table->date('anak_createdt');
-            $table->varchar('anak_modifyby',20);
+            $table->string('anak_modifyby',20);
             $table->date('anak_modifydt');
 
         });

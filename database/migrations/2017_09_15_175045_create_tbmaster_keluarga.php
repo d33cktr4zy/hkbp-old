@@ -13,13 +13,16 @@ class CreateTbmasterKeluarga extends Migration
     public function up()
     {
         Schema::create('tbmaster_keluarga', function (Blueprint $table) {
-            $table->varchar('kk_regno',20);
-            $table->varchar('kk_idumat',20);
-            $table->boolean('kk_pindah');
-            $table->varchar('kk_createby',20);
+            $table->string('kk_regno',20);
+            $table->string('kk_idumat',20);
+            $table->boolean('kk_pindah')->nullable();
+            $table->string('kk_createby',20);
             $table->date('kk_createdt');
-            $table->varchar('kk_modifyby',20);
+            $table->string('kk_modifyby',20);
             $table->date('kk_modifydt');
+
+            $table->primary('kk_regno');
+            $table->unique('kk_idumat');
 
         });
     }

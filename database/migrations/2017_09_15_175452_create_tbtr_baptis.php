@@ -13,14 +13,14 @@ class CreateTbtrBaptis extends Migration
     public function up()
     {
         Schema::create('tbtr_baptis', function (Blueprint $table) {
-            $table->string('bap_regno',20);
+            $table->string('bap_regno',20)->primary();
             $table->string('bap_idumat',20);
             $table->date('bap_tglbaptis');
             $table->string('bap_gereja',255);
             $table->string('bap_pendeta',255);
-            $table->varchar('bap_createby',20);
+            $table->string('bap_createby',20);
             $table->date('bap_createdt');
-            $table->varchar('bap_modifyby',20);
+            $table->string('bap_modifyby',20);
             $table->date('bap_modifydt');
         });
     }

@@ -19,9 +19,9 @@ class CreatePelanggaransTable extends Migration
             $table->date('pl_tgakhir');
             $table->string('pl_sebab',255);
             $table->integer('pl_count')->unsigned();
-            $table->varchar('pl_createby',20);
+            $table->string('pl_createby',20);
             $table->date('pl_createdt');
-            $table->varchar('pl_modifyby',20);
+            $table->string('pl_modifyby',20);
             $table->date('pl_modifydt');
 
             $table->primary('pl_regno');

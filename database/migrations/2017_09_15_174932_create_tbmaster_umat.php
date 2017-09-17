@@ -13,7 +13,7 @@ class CreateTbmasterUmat extends Migration
     public function up()
     {
         Schema::create('tbmaster_umat', function (Blueprint $table) {
-            $table->string('umat_regid',20)->primary();
+            $table->string('umat_regid',20);
             $table->string('umat_namadepan',50);
             $table->string('umat_namabelakang',50);
             $table->string('umat_namatengah',50)->nullable();
@@ -36,6 +36,8 @@ class CreateTbmasterUmat extends Migration
             $table->smallInteger('umat_statusjemaat')->unsigned();
             $table->smallInteger('umat_jabatangereja')->nullable()->unsigned();
             $table->smallInteger('umat_jabatanorgangereja')->nullable()->unsigned();
+            $table->string('umat_kk',20);
+            $table->boolean('umat_iskk');
             $table->string('umat_namaayah',50);
             $table->string('umat_namaibu',50);
             $table->string('umat_createby',10);
@@ -43,8 +45,8 @@ class CreateTbmasterUmat extends Migration
             $table->string('umat_modifyby',10)->nullable();
             $table->date('umat_modifydt')->nullable();
 
-            $table->unique(['umat_namadepan','umat_namabelakang','umat_namatengah']);
-
+            //$table->unique(['umat_namadepan','umat_namabelakang','umat_namatengah']);
+            $table->primary('umat_regid');
         });
     }
 

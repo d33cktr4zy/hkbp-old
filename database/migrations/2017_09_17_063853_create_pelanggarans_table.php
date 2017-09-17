@@ -24,6 +24,7 @@ class CreatePelanggaransTable extends Migration
             $table->varchar('pl_modifyby',20);
             $table->date('pl_modifydt');
 
+            $table->primary('pl_regno');
         });
     }
 

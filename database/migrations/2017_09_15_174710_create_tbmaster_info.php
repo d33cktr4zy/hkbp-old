@@ -13,7 +13,7 @@ class CreateTbmasterInfo extends Migration
     public function up()
     {
         Schema::create('tbmaster_info', function (Blueprint $table) {
-            $table->smallInteger('info_id',false,false);
+            $table->integer('info_id',false,false)->primary();
             $table->string('info_nama',100);
             $table->string('info_value',100);
             $table->string('info_createby',10);
